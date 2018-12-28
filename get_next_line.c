@@ -6,7 +6,7 @@
 /*   By: yomai-va <yomai-va@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/12/05 18:32:29 by yomai-va          #+#    #+#             */
-/*   Updated: 2018/12/26 22:18:55 by yomai-va         ###   ########.fr       */
+/*   Updated: 2018/12/28 20:32:21 by yomai-va         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -40,7 +40,7 @@ char		*ft_fjoin(char *s1, char *s2, int c)
 	return (str);
 }
 
-char		*nextline(char *buff)
+char		*ft_nextline(char *buff)
 {
 	int		pos;
 	char	*str;
@@ -109,6 +109,6 @@ int			get_next_line(const int fd, char **line)
 		c = ft_searchn(buff);
 	}
 	*line = ft_firstline(buff);
-	buff = nextline(buff);
+	buff = ft_nextline(buff);
 	return ((c != 0 || j > 0) ? 1 : j);
 }
